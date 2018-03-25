@@ -1,6 +1,6 @@
 #!/bin/bash
 ticket_number="$(git rev-parse --abbrev-ref HEAD | grep -E -i -o [0-9]{5})"
-message="$1"
+message="'$*'"
 if [ -z "$ticket_number" ]; then
 	git commit -m $message
 else
