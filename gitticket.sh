@@ -4,5 +4,5 @@ message="$*"
 if [ -z $ticket_number ]; then
 	git commit -m "$message"
 else
-	git commit -m "[RMM-"$ticket_number"] $message"
+	git commit -m "[RMM-$ticket_number] $message"
 fi
